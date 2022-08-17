@@ -72,6 +72,7 @@ const musicValue = ref(0)
 
 <style scoped lang="less">
 .footer-container {
+  z-index: 9999;
   width: 100%;
   height: 75px;
   display: flex;

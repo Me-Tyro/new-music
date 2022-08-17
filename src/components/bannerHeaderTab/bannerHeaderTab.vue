@@ -34,8 +34,10 @@ const clickActive = (id) => {
 
 <style scoped lang="less">
 .banner-header-tab {
+  z-index: 9998;
   height: 65px;
   padding-left: 35px;
+  background-color: #fff;
 
   ul {
     height: 100%;

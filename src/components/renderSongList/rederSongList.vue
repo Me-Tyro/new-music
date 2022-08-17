@@ -9,10 +9,14 @@
     <div class="song-list-counter">
       <ul class="counter-ul">
         <li v-for="item in props.songImg" :key="item.id">
-          <img :src="item.picUrl" alt=""/>
+          <img :src="(item.picUrl || item.coverImgUrl)" alt=""/>
           <span>{{ item.name }}</span>
         </li>
       </ul>
+    </div>
+    <!-- 分页 -->
+    <div class="paging">
+      <slot name="selectPagination"></slot>
     </div>
   </div>
 </template>
@@ -61,6 +65,12 @@ const props = defineProps({
         }
       }
     }
+  }
+
+  .paging {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
   }
 }
 </style>

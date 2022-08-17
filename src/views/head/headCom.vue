@@ -25,6 +25,7 @@
 
 <style scoped lang="less">
 .head-container {
+  z-index: 9996;
   width: 100vw;
   height: 65px;
   background-color: #EC4141;

@@ -25,3 +25,25 @@ export const playList = (limit = 10) => {
 export const highQuality = (limit = 1) => {
   return request('/top/playlist/highquality', 'get', {limit: limit})
 }
+
+/**
+ * 歌单 ( 网友精选碟 )
+ * @param cat
+ * @param pageNum
+ * @return {*}
+ */
+export const selectDisc = (cat = '华语', pageNum = 1) => {
+  return request('/top/playlist', 'get', {
+    cat: cat,
+    // 默认 50 首
+    offset: 50 * (pageNum - 1)
+  })
+}
+
+/**
+ * 歌单分类
+ * @return {*}
+ */
+export const categoryList = () => {
+  return request('/playlist/catlist', 'get')
+}
