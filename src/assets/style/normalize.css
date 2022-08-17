@@ -75,6 +75,8 @@ pre {
 
 a {
   background-color: transparent;
+  color: #000;
+  text-decoration: none;
 }
 
 /**
@@ -354,7 +356,18 @@ template {
   padding: 0;
 }
 
+body {
+  height: 100vh;
+  overflow: hidden;
+}
+
+li {
+  list-style: none;
+}
+
 #app {
   /*不能复制页面*/
   user-select: none;
+  height: 100%;
+
 }

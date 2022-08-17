@@ -40,7 +40,7 @@
       <div class="fields-slider">
         <span>00:00</span>
         <div class="slider-demo-block">
-          <el-slider v-model="value" input-size="large"/>
+          <el-slider v-model="value" input-size="large" :show-tooltip="false"/>
         </div>
         <span>00:00</span>
       </div>
@@ -72,13 +72,11 @@ const musicValue = ref(0)
 
 <style scoped lang="less">
 .footer-container {
-  position: fixed;
-  left: 0;
-  bottom: 0;
   width: 100%;
   height: 75px;
   display: flex;
   border-top: 1px solid #999;
+  background-color: #FFFFFF;
 
   .titles {
     width: 200px;

@@ -1,14 +1,18 @@
-import { createStore } from 'vuex'
+import {createStore} from 'vuex'
 
-export default createStore({
-  state: {
-  },
-  getters: {
+const store = createStore({
+  state: () => {
+    return {
+      // banTab: ''
+    }
   },
   mutations: {
+    // getBanTab(state, rou) {
+    //   state.banTab = rou
+    // }
   },
-  actions: {
-  },
-  modules: {
-  }
+  actions: {},
+  getters: {}
 })
+
+export default store

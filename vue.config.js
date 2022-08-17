@@ -15,5 +15,18 @@ module.exports = defineConfig({
         resolvers: [ElementPlusResolver()],
       }),
     ],
+  },
+
+  devServer: {
+    proxy: {
+      '/api': {
+        target: 'http://www.codeman.ink:3000/',
+        secure: false,
+        changeOrigin: true,
+        pathRewrite: {
+          '/api': ''
+        }
+      }
+    }
   }
 })

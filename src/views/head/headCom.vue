@@ -71,6 +71,7 @@
       outline: none;
       background-color: rgba(0, 0, 0, .1);
       color: white;
+      font-size: 14px;
     }
 
     input::-webkit-input-placeholder {
