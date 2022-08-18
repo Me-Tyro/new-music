@@ -17,7 +17,7 @@ module.exports = defineConfig({
     ],
   },
 
-  devServer: {
+    devServer: {
     proxy: {
       '/api': {
         target: 'http://www.codeman.ink:3000/',

@@ -42,7 +42,8 @@
         </div>
       </template>
       <template #selectPagination>
-        <el-pagination background layout="prev, pager, next" :total="300" v-model:current-page="numYeShu"
+        <el-pagination v-if="songList.length" background layout="prev, pager, next" :total="300"
+                       v-model:current-page="numYeShu"
                        @click="paging(numYeShu)"/>
       </template>
     </reder-song-list>
@@ -101,6 +102,7 @@ resettingFun()
 let timer = null
 // 分页函数
 const paging = () => {
+  songList.value = []
   clearTimeout(timer)
   timer = setTimeout(() => {
     resettingFun(chooseMusic.value, numYeShu.value)
